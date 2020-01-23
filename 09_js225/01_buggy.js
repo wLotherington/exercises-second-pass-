@@ -8,13 +8,13 @@ function createGreeter(name) {
       var msg = '';
       switch (timeOfDay) {
         case 'morning':
-          msg += morning + ' ' + this.name;
+          msg += this.morning + ' ' + this.name;
           break;
         case 'afternoon':
-          msg += afternoon + ' ' + name;
+          msg += this.afternoon + ' ' + this.name;
           break;
         case 'evening':
-          msg += evening + ' ' + name;
+          msg += this.evening + ' ' + this.name;
           break;
       }
       
