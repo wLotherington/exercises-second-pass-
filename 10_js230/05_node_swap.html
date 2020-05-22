@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Node Swap</title>
+  </head>
+  <body>
+    <div id="1">
+      <div id="4"></div>
+      <div id="5">
+        <div id="6"></div>
+      </div>
+    </div>
+    <div id="2"></div>
+    <div id="3">
+      <div id="7"></div>
+      <div id="8"></div>
+      <div id="9"></div>
+    </div>
+  </body>
+</html>
+<!-- 
+function child(id1, id2) {
+    var node1 = document.getElementById(id1);
+    var node2 = document.getElementById(id2);
+    
+    while (node2.tagName !== 'BODY') {
+        if (node2 === node1) return true;
+        
+        node2 = node2.parentNode;
+    }
+    
+    return false;
+}
+
+function nodeSwap(id1, id2) {
+    if (!document.getElementById(id1) || !document.getElementById(id2)) return;
+    if (child(id1, id2) || child(id2, id1)) return;
+
+    document.getElementById(id1).insertAdjacentText('beforebegin', 'nodeSwap1');
+    document.getElementById(id2).insertAdjacentText('beforebegin', 'nodeSwap2');
+
+    var nodes1 = document.getElementById(id1).parentNode.childNodes;
+    var nodes2 = document.getElementById(id2).parentNode.childNodes;
+
+    for (var i = 0; i < nodes1.length; i++) {
+        if (nodes1[i].textContent === 'nodeSwap1') {
+            nodes1[i].parentNode.replaceChild(document.getElementById(id2), nodes1[i]);
+        }
+    }
+
+    for (var i = 0; i < nodes2.length; i++) {
+        if (nodes2[i].textContent === 'nodeSwap2') {
+            nodes2[i].parentNode.replaceChild(document.getElementById(id1), nodes1[i]);
+        }
+    }
+}
+ -->
