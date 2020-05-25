@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>randomizer</title>
+</head>
+<body>
+<script>
+  function callback1() {
+    console.log('callback1');
+  }
+
+  function callback2() {
+    console.log('callback2');
+  }
+
+  function callback3() {
+    console.log('callback3');
+  }
+
+  function randomizer(callbacks) {
+    var argCount = arguments.length;
+    var timeLog = 1;
+    var randomTime = function() {
+      return Math.random() * argCount * 2000;
+    };
+
+    var timeLogger = setInterval(function() {
+      console.log(timeLog);
+      timeLog++;
+
+      if (timeLog > argCount * 2) clearInterval(timeLogger);
+      
+    }, 1000);
+
+    for (var i = 0; i < argCount; i++) {
+      setTimeout(arguments[i], randomTime());
+    }
+  }
+
+  randomizer(callback1, callback2, callback3);
+  // Output:
+  // 1
+  // 2
+  // "callback2"
+  // 3
+  // "callback3"
+  // 4
+  // 5
+  // "callback1"
+  // 6
+</script>
+</body>
+</html>

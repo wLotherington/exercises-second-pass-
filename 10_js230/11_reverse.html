@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>reverse engineer</title>
+  <style>
+    #container {
+      background-color: red;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id='container'>
+  </div>
+<script>
+  document.querySelector('html').addEventListener('click', function(event) {
+    var elem = document.querySelector('#container');
+    if (!elem.contains(event.target)) {
+      elem.style = 'display: none';
+    }
+  });
+
+  document.querySelector('#container').addEventListener('click', function(event) {
+    // event.stopPropagation();
+  });
+</script>
+</body>
+</html>
