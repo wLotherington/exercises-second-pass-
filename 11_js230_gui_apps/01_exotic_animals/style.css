@@ -1,0 +1,23 @@
+figure {
+  display: inline-block;
+  background-color: #eee;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+
+figcaption {
+  display: none;
+  position: absolute;
+  margin-top: -4px;
+  width: 200px;
+  background-color: #ddd;
+}
+
+img {
+  height: 100px;
+}
+
+body {
+  text-align: center;
+}
